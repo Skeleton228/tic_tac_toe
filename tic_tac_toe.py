@@ -14,3 +14,9 @@ def validate_input(index, board):
         return False, "Эта клетка уже занята!"
 
     return True, ""
+
+
+def game_rules(board, index, player):
+    board[index - 1] = player
+    next_player = 'O' if player == 'X' else 'X'
+    return board, next_player
