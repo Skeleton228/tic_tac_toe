@@ -33,3 +33,7 @@ def check_win(board):
         if board[a] == board[b] == board[c]:
             return board[a]
     return None
+
+
+def check_draw(board):
+    return all(cell in ('X', 'O') for cell in board) and check_win(board) is None
